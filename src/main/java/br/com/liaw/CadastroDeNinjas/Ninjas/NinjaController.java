@@ -30,8 +30,8 @@ public class NinjaController {
     }
 
     @PutMapping("/alterar")
-    public String updatePutNinja(){
-        return "Atualizar todo o ninja";
+    public NinjaModel updateNinja(@RequestBody NinjaModel ninja){
+        return ninjaService.atualizarNinja(ninja);
     }
 
     @DeleteMapping("/deletar/{id}")
