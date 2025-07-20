@@ -18,4 +18,9 @@ public class NinjaService {
         return ninjaRepository.findAll();
     }
 
+    public NinjaModel listarNinjaId(Long id){
+        Optional<NinjaModel> ninjaPorId = ninjaRepository.findById(id);
+        return ninjaPorId.orElse(null);
+    }
+
 }
