@@ -15,13 +15,13 @@ public class NinjaController {
     }
 
     @PostMapping("/criar")
-    public NinjaModel criarNinja(@RequestBody NinjaModel ninja){
+    public NinjaDTO criarNinja(@RequestBody NinjaDTO ninja){
         return ninjaService.criarNinja(ninja);
     }
 
     @GetMapping("/listar")
     public List<NinjaModel> listarNinjas(){
-        return ninjaService.listarNinja();
+        return ninjaService.listNinja();
     }
 
     @GetMapping("/listar/{id}")
